@@ -20,6 +20,8 @@ const config = {
     "solid/no-destructure": "warn",
     "solid/jsx-no-undef": "error",
     "prettier/prettier": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
   },
 };
 
