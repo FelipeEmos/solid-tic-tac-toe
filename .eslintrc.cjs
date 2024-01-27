@@ -12,33 +12,19 @@ const config = {
     plugins: [
         "solid",
         "@typescript-eslint",
+        "prettier",
     ],
     extends: [
         "eslint:recommended",
-        "plugin:solid/typescript"
+        "plugin:solid/typescript",
+        "plugin:prettier/recommended",
     ],
     rules: {
         "solid/reactivity": "warn",
         "solid/no-destructure": "warn",
-        "solid/jsx-no-undef": "error"
+        "solid/jsx-no-undef": "error",
+        "prettier/prettier": "error",
     },
-    // overrides: [
-    //     {
-    //         "env": {
-    //             "node": true
-    //         },
-    //         "files": [
-    //             ".eslintrc.{js,cjs}"
-    //         ],
-    //         "parserOptions": {
-    //             "sourceType": "script"
-    //         }
-    //     }
-    // ],
-    // env: {
-    //     "browser": true,
-    //     "es2021": true
-    // },
 }
 
 module.exports = config;
