@@ -1,7 +1,7 @@
-import type { Component } from 'solid-js';
-import { Link, useRoutes, useLocation } from '@solidjs/router';
+import type { Component } from "solid-js";
+import { Link, useRoutes, useLocation } from "@solidjs/router";
 
-import { routes } from './routes';
+import { routes } from "./routes";
 
 const App: Component = () => {
   const location = useLocation();
@@ -9,28 +9,28 @@ const App: Component = () => {
 
   return (
     <>
-      <nav class="bg-gray-200 text-gray-900 px-4">
+      <nav class="bg-gray-200 px-4 text-gray-900">
         <ul class="flex items-center">
-          <li class="py-2 px-4">
+          <li class="px-4 py-2">
             <Link href="/" class="no-underline hover:underline">
               Home
             </Link>
           </li>
-          <li class="py-2 px-4">
+          <li class="px-4 py-2">
             <Link href="/about" class="no-underline hover:underline">
               About
             </Link>
           </li>
-          <li class="py-2 px-4">
+          <li class="px-4 py-2">
             <Link href="/error" class="no-underline hover:underline">
               Error
             </Link>
           </li>
 
-          <li class="text-sm flex items-center space-x-1 ml-auto">
+          <li class="ml-auto flex items-center space-x-1 text-sm">
             <span>URL:</span>
             <input
-              class="w-75px p-1 bg-white text-sm rounded-lg"
+              class="w-75px rounded-lg bg-white p-1 text-sm"
               type="text"
               readOnly
               value={location.pathname}
