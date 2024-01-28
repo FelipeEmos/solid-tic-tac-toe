@@ -127,24 +127,24 @@ export function Game() {
           )}
         </For>
       </div>
+
       {winningMessage() ? (
-        <>
-          <h3 class="text-2xl">{winningMessage()}</h3>
-          <button
-            class="rounded-lg bg-slate-800 p-5 text-white hover:bg-slate-600"
-            onClick={() => {
-              console.log("reset", boardState());
-              setBoardState(initialBoardState());
-            }}
-          >
-            Reset Game
-          </button>
-        </>
+        <h3 class="text-2xl">{winningMessage()}</h3>
       ) : (
         <h3 class="text-2xl">
           Now it's <span class="font-bold">{playerTurn()}'s</span> turn
         </h3>
       )}
+      <button
+        class={cn("rounded-lg bg-slate-800 p-5 text-white hover:bg-slate-600", {
+          invisible: gameResult() === undefined,
+        })}
+        onClick={() => {
+          setBoardState(initialBoardState());
+        }}
+      >
+        Reset Game
+      </button>
     </>
   );
 }

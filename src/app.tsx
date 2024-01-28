@@ -7,7 +7,7 @@ const App: Component = () => {
   const Route = useRoutes(routes);
 
   return (
-    <main>
+    <main class="h-full w-full">
       <Route />
     </main>
   );
