@@ -15,12 +15,11 @@ export type BoardState = [
   [SquareValue, SquareValue, SquareValue],
 ];
 
-export const initialBoardState = () =>
-  [
-    [SquareValue.Empty, SquareValue.Empty, SquareValue.Empty],
-    [SquareValue.Empty, SquareValue.Empty, SquareValue.Empty],
-    [SquareValue.Empty, SquareValue.Empty, SquareValue.Empty],
-  ] as const satisfies BoardState;
+export const initialBoardState = [
+  [SquareValue.Empty, SquareValue.Empty, SquareValue.Empty],
+  [SquareValue.Empty, SquareValue.Empty, SquareValue.Empty],
+  [SquareValue.Empty, SquareValue.Empty, SquareValue.Empty],
+] as const satisfies BoardState;
 
 export type Coordinate = { x: number; y: number };
 export type Line = [Coordinate, Coordinate, Coordinate];

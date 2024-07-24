@@ -14,7 +14,7 @@ import { cn } from "~/lib/utils";
 export function Game() {
   const [playerTurn, setPlayerTurn] = createSignal<SquareValue>(SquareValue.X);
   const [boardState, setBoardState] =
-    createSignal<BoardState>(initialBoardState());
+    createSignal<BoardState>(initialBoardState);
 
   const gameResult = (): GameResult => {
     for (const line of [...rows, ...columns, ...diagonals]) {
@@ -140,7 +140,7 @@ export function Game() {
           invisible: gameResult() === undefined,
         })}
         onClick={() => {
-          setBoardState(initialBoardState());
+          setBoardState(initialBoardState);
         }}
       >
         Reset Game
